@@ -1,0 +1,67 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-style: normal;
+  scroll-behavior: smooth;
+}
+
+body {
+  @apply bg-background w-full h-full flex flex-col items-center;
+}
+
+html {
+  @media screen and (max-width: 1080px) {
+    font-size: "93.75%";
+  }
+
+  @media screen and (max-width: 720px) {
+    font-size: 87.5%;
+  }
+
+  overflow-y: auto;
+}
+
+.title1 {
+  @apply text-2xl font-bold text-dark;
+}
+
+.title2 {
+  @apply text-xl font-bold text-dark;
+}
+
+.subtitle1 {
+  @apply text-xl font-bold text-dark;
+}
+
+.subtitle2 {
+  @apply text-2xl font-medium text-dark;
+}
+
+.text1 {
+  @apply text-sm text-dark;
+}
+
+.subtext1 {
+  @apply text-[0.625rem] text-darkgray;
+}
+
+.progress-bar {
+  @apply bg-tertiary rounded-full h-[0.875rem] w-full;
+}
+
+.progress-bar__fill {
+  @apply bg-primary rounded-full h-[0.875rem] transition duration-300;
+}
+
+.input {
+  @apply bg-none outline-none p-3 border-b border-b-dark focus:border-b-tertiary transition duration-300;
+}
+
+textarea {
+  @apply bg-none outline-none p-3 border border-dark focus:border-tertiary transition duration-300;
+}
